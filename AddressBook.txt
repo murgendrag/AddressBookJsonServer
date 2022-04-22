@@ -1,12 +1,10 @@
- json-server --port 4000 --addressroutes.json --watch AddressBookRestSharp.json
-http://localhost:4000/AddressBook
-
-GET
-$ curl -X GET -H "Content-Type:application/json" "http://localhost:4000/AddressBook"
+ json-server --watch AddressBookRestSharp.json
+ curl -X GET -H "Content-Type:application/json" "http://localhost:3000/AddressBook"
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-100   900  100   900    0     0   9363      0 --:--:-- --:--:-- --:--:--  9574[
+  0     0    0     0    0     0      0      0 100   952  100   952    0     0  25759      0 --:--:-- --:--:-- --:--:-- 27200[
   {
+    "Id": 1,
     "FirstName": "daniel",
     "LastName": "jhonson",
     "Address": "c apartment",
@@ -17,6 +15,7 @@ $ curl -X GET -H "Content-Type:application/json" "http://localhost:4000/AddressB
     "Email": "jhjsdhfj@gmail.com"
   },
   {
+    "Id": 2,
     "FirstName": "peter",
     "LastName": "gari",
     "Address": "d apartment",
@@ -27,6 +26,7 @@ $ curl -X GET -H "Content-Type:application/json" "http://localhost:4000/AddressB
     "Email": "jhjretgfj@gmail.com"
   },
   {
+    "Id": 3,
     "FirstName": "john",
     "LastName": "bori",
     "Address": "ty apartment",
@@ -37,6 +37,7 @@ $ curl -X GET -H "Content-Type:application/json" "http://localhost:4000/AddressB
     "Email": "gsitguisj@gmail.com"
   },
   {
+    "Id": 4,
     "FirstName": "ramesh",
     "LastName": "patil",
     "Address": "rg apartment",
@@ -48,8 +49,5 @@ $ curl -X GET -H "Content-Type:application/json" "http://localhost:4000/AddressB
   }
 ]
 
-$ curl -X POST -H "Content-Type:application/json" -d '{FirstName":"gautam","LastName":"Patel","Address":"k Apartmet" "http://localhost:4000/AddressBook/create"
-
-$ curl -X PUT -H "Content-Type:application/json" -d '{"FirstName":"gautam","LastName":"Patel","Address":"k Apartment"}' "http://localhost:4000/AddressBook/update/ramesh"
-
-$ curl -X DELETE -H "Content-Type:application/json" -d '{"FirstName":"gautam","LastName":"Patel","Address":"k Apartment"}' "http://localhost:4000/AddressBook/delete/ramesh"
+curl -X POST -H "Content-Type:application/json" -d '{"Id":5,"FirstName":"Lisa","LastName":"joluie","Address":"fg Apartment"}' "http://localhost:3000/AddressBook/create"
+ $ curl -X PUT -H "Content-Type:application/json"-d'{"Id":"4","FirstName":"Lisa","LastName":"joluie"}'"http://localhost:3000/AddressBook/update/4"
