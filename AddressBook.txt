@@ -50,4 +50,7 @@
 ]
 
 curl -X POST -H "Content-Type:application/json" -d '{"Id":5,"FirstName":"Lisa","LastName":"joluie","Address":"fg Apartment"}' "http://localhost:3000/AddressBook/create"
+
  $ curl -X PUT -H "Content-Type:application/json"-d'{"Id":"4","FirstName":"Lisa","LastName":"joluie"}'"http://localhost:3000/AddressBook/update/4"
+
+curl -x DELETE -H"Content-Type:application/json" "http://localhost:3000/AddressBook/delete/4"
