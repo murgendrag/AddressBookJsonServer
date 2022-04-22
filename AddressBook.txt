@@ -1,0 +1,55 @@
+ json-server --port 4000 --addressroutes.json --watch AddressBookRestSharp.json
+http://localhost:4000/AddressBook
+
+GET
+$ curl -X GET -H "Content-Type:application/json" "http://localhost:4000/AddressBook"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   900  100   900    0     0   9363      0 --:--:-- --:--:-- --:--:--  9574[
+  {
+    "FirstName": "daniel",
+    "LastName": "jhonson",
+    "Address": "c apartment",
+    "City": "Mumbai",
+    "State": "Maharashtra",
+    "zip": 400506,
+    "PhoneNumber": 9876383833,
+    "Email": "jhjsdhfj@gmail.com"
+  },
+  {
+    "FirstName": "peter",
+    "LastName": "gari",
+    "Address": "d apartment",
+    "City": "Delhi",
+    "State": "Delhi",
+    "zip": 50906,
+    "PhoneNumber": 9876356564,
+    "Email": "jhjretgfj@gmail.com"
+  },
+  {
+    "FirstName": "john",
+    "LastName": "bori",
+    "Address": "ty apartment",
+    "City": "Mumbai",
+    "State": "Maharashtra",
+    "zip": 400506,
+    "PhoneNumber": 987638357566,
+    "Email": "gsitguisj@gmail.com"
+  },
+  {
+    "FirstName": "ramesh",
+    "LastName": "patil",
+    "Address": "rg apartment",
+    "City": "Chennai",
+    "State": "Tamilnadu",
+    "zip": 575765,
+    "PhoneNumber": 98763575474,
+    "Email": "jhjfdgkopfk@gmail.com"
+  }
+]
+
+$ curl -X POST -H "Content-Type:application/json" -d '{FirstName":"gautam","LastName":"Patel","Address":"k Apartmet" "http://localhost:4000/AddressBook/create"
+
+$ curl -X PUT -H "Content-Type:application/json" -d '{"FirstName":"gautam","LastName":"Patel","Address":"k Apartment"}' "http://localhost:4000/AddressBook/update/ramesh"
+
+$ curl -X DELETE -H "Content-Type:application/json" -d '{"FirstName":"gautam","LastName":"Patel","Address":"k Apartment"}' "http://localhost:4000/AddressBook/delete/ramesh"
